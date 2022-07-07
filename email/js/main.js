@@ -1,20 +1,28 @@
 const emailInvitati = ['mario.rossi@gmail.com', 'elisa.bianchi@gmail.com', 'simone.lorem@gmail.com', 'viola.rossetti@gmail.com', 'laura.ferri@gmail.com'];
 
+let email = document.forms["myForm"].email.value;
+
 let MainButton = document.getElementById('main-button');
 MainButton.addEventListener('click', function(){
 
-    let email = document.forms["myForm"].email.value;
 
-    for (let i = 0; i < emailInvitati.length; i++)
+    let accessoOk = false;
 
-    if ((email != emailInvitati[i]) || (email == "")){
-      alert("Indirizzo E-mail non valido");
+    for (let i = 0; i < emailInvitati.length; i++){
+
+        if (email == emailInvitati[i]){
+            accessoOk = true;
+        }
+    }
+
+    if (accessoOk == true){
+        alert("Indirizzo E-mail è valido");
     }
 
     else {
-       alert("L'indirizzo email che hai inserito e' valido");
+       alert("L'indirizzo email che hai inserito non è valido");
     }
 
-    console.log(email)
-  
+    console.log(email);
+    
 });
