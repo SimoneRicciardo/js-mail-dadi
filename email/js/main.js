@@ -1,10 +1,9 @@
 const emailInvitati = ['mario.rossi@gmail.com', 'elisa.bianchi@gmail.com', 'simone.lorem@gmail.com', 'viola.rossetti@gmail.com', 'laura.ferri@gmail.com'];
 
-let email = document.forms["myForm"].email.value;
-
 let MainButton = document.getElementById('main-button');
 MainButton.addEventListener('click', function(){
-
+    
+    let email = document.forms["myForm"].email.value;
 
     let accessoOk = false;
 
